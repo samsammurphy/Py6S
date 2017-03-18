@@ -7,13 +7,15 @@ Py6S and all of its dependencies (including 6S itself) are available through the
 ``conda`` package manager on the ``conda-forge`` channel. This is by far the
 easiest way to install Py6S, and is strongly recommended.
 
-If you already have ``conda`` installed, then you can create a new environment containing Py6S and all
-of its dependencies by running::
+If you already have ``conda`` installed, then you can add the conda-forge channel
 
-    $ conda create -n py6s-env -c conda-forge py6s
+    $ conda config --add channels conda-forge
+ 
+and install py6s
 
-This will create a new environment called ``py6s-env``, and will then tell you how to 'activate'
-the environment, which you should now do. You can now skip to `Testing Py6S`_.
+    $ conda install py6s
+
+You can now skip to `Testing Py6S`_.
 
 If you don't already have ``conda`` installed then:
 
@@ -44,6 +46,15 @@ If you don't already have ``conda`` installed then:
     You'll need to agree to the package installation plan that conda provides, and then it will
     download and install Py6S and its dependencies (including the underlying 6S model).
 
+You can now skip to `Testing Py6S`_.
+
+
+If you prefer you can access py6s by building a new conda environment.
+
+    $ conda create -n py6s-env -c conda-forge py6s
+
+This will create a new environment called ``py6s-env``.
+
 #. Activate the environment by running the command shown at the end of the installation
     On Linux/OS X this is ``source activate py6s-env``.
 
@@ -51,7 +62,6 @@ If you don't already have ``conda`` installed then:
 
     Remember, you will need to do this **every** time before using Py6S.
 
-You can now skip to `Testing Py6S`_.
 
 Alternative: Manual installation
 --------------------------------
